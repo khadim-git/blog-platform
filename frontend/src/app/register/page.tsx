@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { authAPI } from '../../lib/api';
+// Auth functionality to be implemented
+// import { authAPI } from '@/lib/api';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -74,14 +75,26 @@ export default function Register() {
         }
       }
       
-      const response = await authAPI.register(
-        formData.email, 
-        formData.username, 
-        formData.password, 
-        formData.role,
-        avatarUrl
-      );
-      setMessage(response.message);
+      const response = await fetch('http://localhost:8000/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          username: formData.username,
+          password: formData.password,
+          role: formData.role,
+          avatar_url: avatarUrl
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error('Registration failed');
+      }
+      
+      const result = await response.json();
+      setMessage(result.message || 'Registration successful');
       setFormData({
         email: '',
         username: '',

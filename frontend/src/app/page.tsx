@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { postsAPI, commentsAPI } from '../lib/api';
-import Navbar from '../components/Navbar';
-import LikeButton from '../components/LikeButton';
-import PostSlider from '../components/PostSlider';
-import Footer from '../components/Footer';
+import { postsAPI } from '@/utils/api';
+import Navbar from '@/components/Navbar';
+import LikeButton from '@/components/LikeButton';
+import PostSlider from '@/components/PostSlider';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -22,28 +22,13 @@ export default function Home() {
       const data = await postsAPI.getPosts(0, 50);
       setPosts(data);
       
-      // Get comment counts for each post
-      const postsWithCommentCounts = await Promise.all(
-        data.map(async (post: any) => {
-          try {
-            const comments = await commentsAPI.getComments(post.id);
-            return { ...post, commentCount: comments.length };
-          } catch {
-            return { ...post, commentCount: 0 };
-          }
-        })
-      );
-      
-      // Sort by recent and most commented
-      const sortedPosts = postsWithCommentCounts
+      // Sort by recent posts
+      const sortedPosts = data
         .sort((a, b) => {
-          // First by comment count (descending), then by date (descending)
-          if (b.commentCount !== a.commentCount) {
-            return b.commentCount - a.commentCount;
-          }
           return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
         })
-        .slice(0, 10);
+        .slice(0, 10)
+        .map((post: any) => ({ ...post, commentCount: post.comments_count || 0 }));
       
       setPostsWithComments(sortedPosts);
     } catch (error) {

@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { authAPI } from '../../lib/api';
-import { setAuth } from '../../lib/auth';
+// Auth functionality to be implemented
+// import { authAPI } from '@/lib/api';
+// import { setAuth } from '@/lib/auth';
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -26,8 +27,25 @@ export default function Login() {
     setError('');
 
     try {
-      const response = await authAPI.login(formData.email, formData.password);
-      setAuth(response.access_token, response.user);
+      const response = await fetch('http://localhost:8000/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+      
+      const data = await response.json();
+      // Store token in localStorage or cookie
+      localStorage.setItem('token', data.access_token);
+      localStorage.setItem('user', JSON.stringify(data.user));
       window.location.href = '/dashboard';
     } catch (error: any) {
       setError(error.message || 'Login failed');

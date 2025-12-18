@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { postsAPI, likesAPI } from '../../lib/api';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+import { postsAPI } from '@/utils/api';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 interface Post {
   id: number;
@@ -29,28 +29,8 @@ export default function PostsPage() {
   const [likedPosts, setLikedPosts] = useState<Set<number>>(new Set());
 
   const handleLike = async (postId: number) => {
-    try {
-      await likesAPI.toggleLike(postId);
-      const updatedPosts = posts.map(post => {
-        if (post.id === postId) {
-          const isLiked = likedPosts.has(postId);
-          const newLikesCount = isLiked ? (post as any).likes_count - 1 : (post as any).likes_count + 1;
-          return { ...post, likes_count: newLikesCount };
-        }
-        return post;
-      });
-      setPosts(updatedPosts);
-      
-      const newLikedPosts = new Set(likedPosts);
-      if (likedPosts.has(postId)) {
-        newLikedPosts.delete(postId);
-      } else {
-        newLikedPosts.add(postId);
-      }
-      setLikedPosts(newLikedPosts);
-    } catch (error) {
-      console.error('Failed to toggle like');
-    }
+    // Like functionality - to be implemented
+    console.log('Like post:', postId);
   };
 
   useEffect(() => {
