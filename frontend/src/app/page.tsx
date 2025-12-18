@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { postsAPI, commentsAPI } from 'src/lib/api';
-import Navbar from 'src/components/Navbar';
-import LikeButton from 'src/components/LikeButton';
-import PostSlider from 'src/components/PostSlider';
-import Footer from 'src/components/Footer';
+import { postsAPI, commentsAPI } from '@/lib/api';
+import Navbar from '@/components/Navbar';
+import LikeButton from '@/components/LikeButton';
+import PostSlider from '@/components/PostSlider';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [posts, setPosts] = useState([]);

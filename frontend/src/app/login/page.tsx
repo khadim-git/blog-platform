@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { authAPI } from 'src/lib/api';
-import { setAuth } from 'src/lib/auth';
+import { authAPI } from '@/lib/api';
+import { setAuth } from '@/lib/auth';
 
 export default function Login() {
   const [formData, setFormData] = useState({

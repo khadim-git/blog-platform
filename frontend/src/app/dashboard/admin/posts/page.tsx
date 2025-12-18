@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ProtectedRoute from 'src/components/ProtectedRoute';
-import MudLayout from 'src/components/MudLayout';
-import { postsAPI } from 'src/lib/api';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import MudLayout from '@/components/MudLayout';
+import { postsAPI } from '@/lib/api';
 
 export default function AdminPosts() {
   const [posts, setPosts] = useState([]);

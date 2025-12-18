@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ProtectedRoute from 'src/components/ProtectedRoute';
-import MudLayout from 'src/components/MudLayout';
-import { commentsAPI } from 'src/lib/api';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import MudLayout from '@/components/MudLayout';
+import { commentsAPI } from '@/lib/api';
 
 export default function AdminComments() {
   const [comments, setComments] = useState([]);

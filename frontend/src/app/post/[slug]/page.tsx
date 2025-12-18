@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { postsAPI, commentsAPI } from 'src/lib/api';
-import Navbar from 'src/components/Navbar';
-import Footer from 'src/components/Footer';
-import FacebookComments from 'src/components/FacebookComments';
+import { postsAPI, commentsAPI } from '@/lib/api';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import FacebookComments from '@/components/FacebookComments';
 import Cookies from 'js-cookie';
 
 export default function PostPage({ params }: { params: { slug: string } }) {

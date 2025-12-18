@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { postsAPI, likesAPI } from 'src/lib/api';
-import Navbar from 'src/components/Navbar';
-import Footer from 'src/components/Footer';
+import { postsAPI, likesAPI } from '@/lib/api';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 interface Post {
   id: number;

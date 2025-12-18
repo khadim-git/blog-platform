@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import ProtectedRoute from 'src/components/ProtectedRoute';
-import MudLayout from 'src/components/MudLayout';
-import { usersAPI } from 'src/lib/api';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import MudLayout from '@/components/MudLayout';
+import { usersAPI } from '@/lib/api';
 
 export default function EditUser({ params }: { params: { id: string } }) {
   const router = useRouter();
