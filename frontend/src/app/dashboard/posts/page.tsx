@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import MudLayout from '@/components/MudLayout';
-import { postsAPI } from '@/lib/api';
-import { hasRole } from '@/lib/auth';
+import ProtectedRoute from '../../../components/ProtectedRoute';
+import MudLayout from '../../../components/MudLayout';
+import { postsAPI } from '../../../lib/api';
+import { hasRole } from '../../../lib/auth';
 
 export default function ManagePosts() {
   const [posts, setPosts] = useState([]);

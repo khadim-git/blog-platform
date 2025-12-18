@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { likesAPI } from '@/lib/api';
-import { getUser } from '@/lib/auth';
+import { likesAPI } from '../lib/api';
+import { getUser } from '../lib/auth';
 
 interface LikeButtonProps {
   postId: number;

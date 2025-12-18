@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getToken } from '@/lib/auth';
+import { getToken } from '../lib/auth';
 
 interface Category {
   id: number;

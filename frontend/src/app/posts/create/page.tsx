@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import CategoryTagSelector from '@/components/CategoryTagSelector';
-import { getToken } from '@/lib/auth';
-import { postsAPI } from '@/lib/api';
-import Navbar from '@/components/Navbar';
+import CategoryTagSelector from '../../../components/CategoryTagSelector';
+import { getToken } from '../../../lib/auth';
+import { postsAPI } from '../../../lib/api';
+import Navbar from '../../../components/Navbar';
 
 export default function CreatePostPublic() {
   const router = useRouter();

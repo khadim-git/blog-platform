@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { commentsAPI } from '@/lib/api';
+import { commentsAPI } from '../lib/api';
 import Cookies from 'js-cookie';
 
 interface Comment {

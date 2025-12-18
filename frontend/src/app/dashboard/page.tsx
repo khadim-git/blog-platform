@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import MudLayout from '@/components/MudLayout';
-import { commentsAPI, postsAPI, usersAPI } from '@/lib/api';
-import { getUser, hasRole } from '@/lib/auth';
+import ProtectedRoute from '../../components/ProtectedRoute';
+import MudLayout from '../../components/MudLayout';
+import { commentsAPI, postsAPI, usersAPI } from '../../lib/api';
+import { getUser, hasRole } from '../../lib/auth';
 import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { 

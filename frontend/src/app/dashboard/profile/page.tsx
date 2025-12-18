@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import MudLayout from '@/components/MudLayout';
-import { usersAPI } from '@/lib/api';
-import { getUser } from '@/lib/auth';
+import ProtectedRoute from '../../../components/ProtectedRoute';
+import MudLayout from '../../../components/MudLayout';
+import { usersAPI } from '../../../lib/api';
+import { getUser } from '../../../lib/auth';
 
 export default function ProfilePage() {
   const [user, setUser] = useState<any>(null);

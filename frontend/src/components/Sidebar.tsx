@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getUser, hasRole, clearAuth } from '@/lib/auth';
+import { getUser, hasRole, clearAuth } from '../lib/auth';
 import { useState, useEffect } from 'react';
 
 export default function Sidebar() {

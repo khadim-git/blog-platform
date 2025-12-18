@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getUser, clearAuth } from '@/lib/auth';
-import { usersAPI } from '@/lib/api';
+import { getUser, clearAuth } from '../lib/auth';
+import { usersAPI } from '../lib/api';
 import Cookies from 'js-cookie';
 
 interface Category {

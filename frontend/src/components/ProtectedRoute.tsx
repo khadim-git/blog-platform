@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { isAuthenticated, hasRole } from '@/lib/auth';
+import { isAuthenticated, hasRole } from '../lib/auth';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
