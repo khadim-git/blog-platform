@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import MudLayout from '@/components/MudLayout';
+import ProtectedRoute from '../../../../components/ProtectedRoute';
+import MudLayout from '../../../../components/MudLayout';
 import dynamic from 'next/dynamic';
 
 const Chart = dynamic(() => import('react-apexcharts'), { 

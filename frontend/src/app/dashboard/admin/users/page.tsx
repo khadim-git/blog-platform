@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import MudLayout from '@/components/MudLayout';
-import { usersAPI } from '@/lib/api';
+import ProtectedRoute from '../../../../../components/ProtectedRoute';
+import MudLayout from '../../../../../components/MudLayout';
+import { usersAPI } from '../../../../../lib/api';
 
 export default function AdminUsers() {
   const [users, setUsers] = useState([]);

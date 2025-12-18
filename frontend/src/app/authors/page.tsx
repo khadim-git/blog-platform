@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usersAPI } from '@/lib/api';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { usersAPI } from '../../../lib/api';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer';
 
 export default function AuthorsPage() {
   const [authors, setAuthors] = useState([]);
