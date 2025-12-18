@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ProtectedRoute from '../../../../components/ProtectedRoute';
-import MudLayout from '../../../../components/MudLayout';
-import { getToken } from '../../../../lib/auth';
+import ProtectedRoute from '../../../components/ProtectedRoute';
+import MudLayout from '../../../components/MudLayout';
+import { getToken } from '../../../lib/auth';
 
 interface Category {
   id: number;

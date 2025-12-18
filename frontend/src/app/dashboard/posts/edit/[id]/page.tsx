@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import ProtectedRoute from '../../../../../components/ProtectedRoute';
-import MudLayout from '../../../../../components/MudLayout';
-import CategoryTagSelector from '../../../../../components/CategoryTagSelector';
-import { getToken } from '../../../../../lib/auth';
-import { postsAPI } from '../../../../../lib/api';
+import ProtectedRoute from '../../../../components/ProtectedRoute';
+import MudLayout from '../../../../components/MudLayout';
+import CategoryTagSelector from '../../../../components/CategoryTagSelector';
+import { getToken } from '../../../../lib/auth';
+import { postsAPI } from '../../../../lib/api';
 
 export default function EditPost() {
   const params = useParams();
