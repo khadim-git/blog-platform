@@ -1,8 +1,12 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-export const metadata = {
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
   title: 'Blog Platform',
-  description: 'A modern blog platform built with FastAPI and Next.js',
+  description: 'A modern blog platform',
 }
 
 export default function RootLayout({
@@ -12,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 min-h-screen">
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
