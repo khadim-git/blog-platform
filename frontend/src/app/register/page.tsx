@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { authAPI } from '../../../lib/api';
+import { authAPI } from 'src/lib/api';
 
 export default function Register() {
   const [formData, setFormData] = useState({

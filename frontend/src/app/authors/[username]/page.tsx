@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { postsAPI } from '../../../lib/api';
-import Navbar from '../../../components/Navbar';
-import Footer from '../../../components/Footer';
+import { postsAPI } from 'src/lib/api';
+import Navbar from 'src/components/Navbar';
+import Footer from 'src/components/Footer';
 import Link from 'next/link';
 
 export default function AuthorPosts() {

@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import ProtectedRoute from '../../../../../../components/ProtectedRoute';
-import MudLayout from '../../../../../../components/MudLayout';
-import { usersAPI } from '../../../../../../lib/api';
+import ProtectedRoute from 'src/components/ProtectedRoute';
+import MudLayout from 'src/components/MudLayout';
+import { usersAPI } from 'src/lib/api';
 
 export default function CreateUser() {
   const router = useRouter();

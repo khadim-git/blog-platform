@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import MudLayout from '../../../../../components/MudLayout';
+import MudLayout from 'src/components/MudLayout';
 import Cookies from 'js-cookie';
 
 interface Contact {

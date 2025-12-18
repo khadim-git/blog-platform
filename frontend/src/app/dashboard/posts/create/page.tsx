@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import ProtectedRoute from '../../../../../components/ProtectedRoute';
-import MudLayout from '../../../../../components/MudLayout';
-import CategoryTagSelector from '../../../../../components/CategoryTagSelector';
-import { getToken } from '../../../../../lib/auth';
-import { postsAPI } from '../../../../../lib/api';
+import ProtectedRoute from 'src/components/ProtectedRoute';
+import MudLayout from 'src/components/MudLayout';
+import CategoryTagSelector from 'src/components/CategoryTagSelector';
+import { getToken } from 'src/lib/auth';
+import { postsAPI } from 'src/lib/api';
 
 export default function CreatePost() {
   const router = useRouter();
