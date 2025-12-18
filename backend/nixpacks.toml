@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ['python311', 'gcc']
+nixPkgs = ['python311', 'gcc', 'pkg-config', 'openssl']
 
 [phases.install]
-cmds = ['pip install --upgrade pip', 'pip install -r requirements.txt']
+cmds = ['pip install --upgrade pip setuptools wheel', 'pip install --no-cache-dir -r requirements.txt']
 
 [phases.build]
 cmds = ['echo "Build complete"']
